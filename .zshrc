@@ -19,3 +19,5 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 export DISABLE_AUTO_TITLE=true
 #cmatrix
+alias g=git
+alias cfg=config

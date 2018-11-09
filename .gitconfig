@@ -8,3 +8,16 @@
 	br = branch
 	ci = commit
 	st = status
+	p = pull
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	viz = !gitk
+	a = add
+	puom = push origin master
+	psom = push upstreram  master
+	plom = pull origin master
+	fom = fetch origin master
+	fum = fetch urigin master
+	plum = pull upstream master
+	d = diff
+	rb = rebase
