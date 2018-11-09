@@ -1,0 +1,10 @@
+[user]
+	email = jacob.sf.us@gmail.com
+	name = Jacob S
+[status]
+	showUntrackedFiles = no
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
