@@ -13,3 +13,6 @@ pulse/
 .npm
 .nvm
 node_modules/
+storage/
+torrents/
+Code/
