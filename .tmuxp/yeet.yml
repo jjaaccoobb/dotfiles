@@ -1,0 +1,26 @@
+session_name: yeet
+windows:
+  - window_name: sysmon
+    layout: tiled
+    panes:
+      - shell_command:
+          - sleep 1
+          - clear
+          - echo "first"
+          - tmux resize-pane -x 89
+      - shell_command:
+          - sleep 1
+          - clear
+          - sudo htop 
+      - shell_command:
+          - sleep 1
+          - clear
+          - sudo iotop
+      - shell_command:
+          - sleep 1
+          - clear
+          - sudo iftop
+      - shell_command:
+          - tmux select-layout main-vertical
+          - clear
+          - sudo nethogs

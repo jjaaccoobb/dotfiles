@@ -1,0 +1,12 @@
+session_name: 3p
+windows:
+- window_name: main
+  layout: main-vertical
+  panes:
+    - echo "Hi" 
+    - shell_command: 
+        - tmux split-window -v "sudo htop"
+        - tmux split-window -v "sudo iotop"
+        - tmux split-window -v "sudo iftop"
+        - tmux split-window -v "sudo nethogs"
+        - exit

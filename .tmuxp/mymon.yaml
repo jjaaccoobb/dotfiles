@@ -1,0 +1,22 @@
+session_name: main-vertical-demo
+windows:
+  - window_name: demo
+    layout: main-vertical
+    panes:
+      - shell_command:
+          - sleep 1
+          - clear
+          - tmux resize-pane \-y 60
+          - echo "first"
+        - shell_command:
+          - sleep 1
+           sudo htop;
+           tmux split-window \-h
+           sleep 1
+           sudo iotop
+           tmux split-window \-h
+           sleep 1
+           sudo iftop
+           split-window \-h
+           sleep 1
+           sudo nethogs

@@ -1,0 +1,21 @@
+session_name: main-vertical-demo
+windows:
+  - window_name: demo
+    layout: tiled
+    panes:
+      - shell_command:
+          - sleep 1
+          - clear
+          - echo "first"
+      - shell_command:
+          - sleep 1
+          - clear
+          - echo "second"
+      - shell_command:
+          - sleep 1
+          - clear
+          - echo "third"
+      - shell_command:
+          - tmux select-layout main-vertical
+          - clear
+          - echo "fourth"

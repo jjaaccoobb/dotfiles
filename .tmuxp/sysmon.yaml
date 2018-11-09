@@ -1,0 +1,11 @@
+session_name: main-vertical-demo
+windows:
+  - window_name: demo
+    layout: tiled
+    panes:
+      - shell_command:
+        - speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 ))
+      - shell_command:
+        - htop
+      - shell_command:
+        - gtop 
