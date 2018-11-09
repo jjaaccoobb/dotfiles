@@ -1,0 +1,15 @@
+.tldr/
+Storage/
+Android/
+Downloads/
+Documents/
+Desktop/
+100ANDRO/
+.torrents_incomplete/
+.config/chromium/
+pulse/
+.config/wpulse/
+.config/pulse/
+.npm
+.nvm
+node_modules/
