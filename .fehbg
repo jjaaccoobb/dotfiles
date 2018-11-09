@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-scale' 'Desktop/mac5k.jpg' 
+'feh' '--bg-tile' 'Documents/pixbg.png' 
