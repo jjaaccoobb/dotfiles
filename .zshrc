@@ -29,5 +29,7 @@ alias offvga="xrandr --output VGA-1 --off"
 cfgadd () {
   cd ~
   config add $(config status | grep modified | sed 's/\(.*modified:\s*\)//')
+  config commit -m "automated commit from zshrc"
+  config push origin master
 }
 #
