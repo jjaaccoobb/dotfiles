@@ -35,9 +35,5 @@ cfgadd () {
 
 commands () {
   cd ~
-  history > history
   awk '{$1=""; print}' < history | sort | uniq -u
 }
-
-
-
