@@ -30,3 +30,4 @@ cfgadd () {
   cd ~
   config add $(config status | grep modified | sed 's/\(.*modified:\s*\)//')
 }
+#
