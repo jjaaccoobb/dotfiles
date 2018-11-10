@@ -32,4 +32,12 @@ cfgadd () {
   config commit -m "automated commit from zshrc"
   config push origin master
 }
-#
+
+commands () {
+  cd ~
+  history > history
+  awk '{$1=""; print}' < history | sort | uniq -u
+}
+
+
+
