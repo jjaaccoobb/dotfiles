@@ -21,3 +21,6 @@ export DISABLE_AUTO_TITLE=true
 #cmatrix
 alias g=git
 alias cfg=config
+alias offlvds="xrandr --output LVDS-1 --off"
+alias offhdmi="xrandr --output HDMI-1 --off"
+alias offvga="xrandr --output VGA-1 --off"

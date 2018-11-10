@@ -130,13 +130,13 @@ font-1 = Terminus:style=Regular:size=14
 font-2 = Terminus:style=Regular:size=14
 modules-left = i3
 modules-center = xwindow mpd
-modules-right = pulseaudio battery temperature memory filesystem cpu wlan eth date
-tray-position =
+modules-right = whatpulse pulseaudio battery temperature memory filesystem cpu wlan eth date
+tray-position = left
 tray-padding = 0
 tray-transparent = true
 ;tray-background = #0063ff
 ;wm-restack = bspwm
-wm-restack = i3
+;wm-restack = i3
 ;override-redirect = true
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev

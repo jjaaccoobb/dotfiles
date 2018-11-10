@@ -1,8 +1,8 @@
-exec --no-startup-id i3-msg 'workspace 1:Home; exec /usr/bin/firefox'
-exec --no-startup-id i3-msg 'workspace 1:Home; exec /usr/bin/gnome-terminal -e tmuxp load veet'
+#exec --no-startup-id i3-msg 'workspace 1:Home; exec /usr/bin/firefox'
+#exec --no-startup-id i3-msg 'workspace 1:Home; exec /usr/bin/gnome-terminal -e tmuxp load veet'
 #exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox'
 #exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox'
-
+exec --no-startup-id nohup ./home/jacob/whatpulse &
 # modifier set to win key
 set $mod Mod4
 floating_modifier $mod
@@ -149,6 +149,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="(?i)evince"] floating enable border none resize set 320 180 move position 0 0 no_focus
 for_window [class="mpv"] floating enable resize set 400 300
+for_window [class="Volume Control"] floating enable resize set 600 400
 for_window [title="- mpsyt"] move scratchpad
 
 no_focus [class="(?i)evince"]
@@ -211,7 +212,7 @@ mode "resize" {
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
+#exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
