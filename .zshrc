@@ -25,4 +25,8 @@ alias offlvds="xrandr --output LVDS-1 --off"
 alias offhdmi="xrandr --output HDMI-1 --off"
 alias offvga="xrandr --output VGA-1 --off"
 
-alias cfgadd=cd ~;config add `config status | grep modified | sed 's/\(.*modified:\s*\)//'`
+
+cfgadd () {
+  cd ~
+  config add $(config status | grep modified | sed 's/\(.*modified:\s*\)//')
+}
