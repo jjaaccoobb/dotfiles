@@ -310,7 +310,7 @@ exec --no-startup-id dunst
 ;exec_always --no-startup-id xrandr --output VGA-1 --auto --left-of HDMI-1 --rotate right
 exec_always --no-startup-id sh /home/jacob/scripts/wallpaper.sh
 exec_always --no-startup-id gnome-terminal --title=scratchterm
-bindsym $mod+u [title="scratchterm"] scratchpad show
+bindsym $mod+t [title="scratchterm"] scratchpad show
 for_window [title="scratchterm"] border none
 for_window [title="scratchterm"] floating enable sticky enable
 for_window [title="scratchterm"] move scratchpad
