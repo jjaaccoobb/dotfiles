@@ -19,3 +19,9 @@ torrents/
 Code/
 /etc/shadow
 /etc/passwd
+.cfg
+.Android
+.local/
+.mozilla/
+.composer/
+.AndroidStudio3.2/

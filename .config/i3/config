@@ -1,4 +1,5 @@
 #exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox'
+exec --no-startup-id compton
 exec --no-startup-id nohup ./home/jacob/whatpulse &
 # modifier set to win key
 set $mod Mod4
@@ -290,7 +291,7 @@ exec --no-startup-id synclient VertScrollDelta=-113
 
 # start dunst notification daemon
 exec --no-startup-id dunst
-;exec_always --no-startup-id xrandr --output VGA-1 --auto --left-of HDMI-1 --rotate right
+#exec_always --no-startup-id xrandr --output VGA-1 --auto --left-of HDMI-1 --rotate right
 exec_always --no-startup-id sh /home/jacob/scripts/wallpaper.sh
 exec_always --no-startup-id gnome-terminal --title=scratchterm
 bindsym $mod+t [title="scratchterm"] scratchpad show
