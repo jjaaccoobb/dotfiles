@@ -257,13 +257,13 @@ mode "$mode_gaps_outer" {
 }
 
 # assign laptop media keys
-bindsym XF86AudioRaiseVolume exec amixer set Master -q 5+ unmute
-bindsym XF86AudioLowerVolume exec amixer set Master -q 5- unmute
+bindsym XF86AudioRaiseVolume exec amixer set Master -q 2+ unmute
+bindsym XF86AudioLowerVolume exec amixer set Master -q 2- unmute
 bindsym XF86AudioMute exec amixer set Master toggle
 
 # keyboard shortcuts for alsa volume
-bindsym $mod+comma exec amixer set Master -q 5- unmute
-bindsym $mod+period exec amixer set Master -q 5+ unmute
+bindsym $mod+comma exec amixer set Master -q 2- unmute
+bindsym $mod+period exec amixer set Master -q 2+ unmute
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
