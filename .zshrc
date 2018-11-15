@@ -37,3 +37,5 @@ commands () {
   cd ~
   awk '{$1=""; print}' < history | sort | uniq -u
 }
+NEWLINE=$'\n'
+PS1="$PS1$NEWLINE$ "
