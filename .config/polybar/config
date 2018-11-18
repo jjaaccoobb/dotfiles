@@ -130,7 +130,7 @@ font-1 = Terminus:style=Regular:size=14
 font-2 = Terminus:style=Regular:size=14
 modules-left = i3
 modules-center = xwindow mpd
-modules-right = whatpulse pulseaudio battery temperature memory filesystem cpu wlan eth date
+modules-right = pulseaudio battery temperature memory filesystem cpu wlan eth date
 tray-position = left
 tray-padding = 0
 tray-transparent = true
@@ -292,6 +292,20 @@ ramp-signal-2 = ||)
 ramp-signal-3 = |||)
 ramp-signal-4 = :)
 ramp-signal-foreground = ${colors.foreground-alt}
+
+[module/usb]
+type = internal/network
+interface = veth5073ab5@if39
+interval = 3.0
+format-connected-underline = #55aa55
+format-connected-prefix = "USBCX"
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip% ↓%downspeed% ↑%upspeed%
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network

@@ -14,7 +14,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 alias vz='vim ~/.zshrc'
-alias dbx='cd /opt/devilbox; sudo service mysql stop; sudo service nginx stop; sudo service docker start; sudo docker-compose up'
+alias dbx='cd /opt/devilbox; sudo service mysql stop; sudo service redis stop; sudo service nginx stop; sudo service docker start; sudo docker-compose up'
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 export DISABLE_AUTO_TITLE=true
@@ -39,3 +39,7 @@ commands () {
 }
 NEWLINE=$'\n'
 PS1="$PS1$NEWLINE$ "
+
+tx () {
+  cd /home/jacob/storage/torrents
+}
