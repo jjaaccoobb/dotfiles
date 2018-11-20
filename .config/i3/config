@@ -1,6 +1,8 @@
 #exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox'
+# Start a floating terminal
 exec --no-startup-id compton
-exec --no-startup-id nohup ./home/jacob/whatpulse &
+exec --no-startup-id nm-applet
+exec --no-startup-id nohup ./home/jacob/whatpulse
 # modifier set to win key
 set $mod Mod4
 floating_modifier $mod
@@ -302,7 +304,9 @@ for_window [title="scratchterm"] border none
 for_window [title="scratchterm"] floating enable sticky enable
 for_window [title="scratchterm"] move scratchpad
 for_window [title="scratchterm"] resize set 920 600
+for_window [title="tty-clock"] floating enable resize set 350 90
 
 bindsym $mod+shift+f exec firefox
 bindsym $mod+shift+n exec nautilus
 
+bindsym $mod+shift+z exec "gnome-terminal --title=tty-clock --geometry 35x9 -- tty-clock -b -c -C 3 -D"
