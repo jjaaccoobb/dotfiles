@@ -26,84 +26,6 @@ secondary = #e60053
 alert = #bd2c40
 white = #fff
 
-; VGA TOP
-[bar/vgatop]
-monitor = ${env:MONITOR:VGA-1}
-width = 100%
-height = 20
-;offset-x = 1%
-;offset-y = 1%
-radius = 0
-fixed-center = false
-background = ${colors.background}
-foreground = ${colors.white}
-line-size = 0
-line-color = #f00
-border-size = 0
-border-color = #00000000
-padding-left = 0
-padding-right = 0
-module-margin-left = 0
-module-margin-right = 1
-font-0 = Terminus:style=Regular:size=14
-font-1 = Terminus:style=Regular:size=14
-font-2 = Terminus:style=Regular:size=14
-modules-left = i3
-modules-center = xwindow
-;modules-right = wlan eth memory filesystem battery cpu temperature
-tray-position =
-tray-padding = 0
-;tray-transparent = true
-;tray-background = #0063ff
-wm-restack = i3
-;override-redirect = true
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-; BOTTOM BAR
-[bar/bottom]
-bottom = true
-monitor = ${env:MONITOR:HDMI-1}
-;monitor = ${env:MONITOR:LVDS-1}
-width = 100%
-height = 20
-;offset-x = 1%
-;offset-y = 1%
-radius = 0
-fixed-center = false
-background = ${colors.background}
-foreground = ${colors.white}
-line-size = 0
-line-color = #f00
-border-size = 0
-border-color = #00000000
-padding-left = 0
-padding-right = 0
-module-margin-left = 0
-module-margin-right = 1
-font-0 = Terminus:style=Regular:size=14
-font-1 = Terminus:style=Regular:size=14
-font-2 = Terminus:style=Regular:size=14
-;modules-left = i3
-;modules-center = xwindow mpd
-modules-right = wlan eth memory filesystem battery cpu temperature
-tray-position =
-tray-padding = 0
-;tray-transparent = true
-;tray-background = #0063ff
-wm-restack = i3
-;override-redirect = true
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-cursor-click = pointer
-cursor-scroll = ns-resize
-
 ; TOP BAR
 
 [bar/top]
@@ -130,7 +52,7 @@ font-1 = Terminus:style=Regular:size=14
 font-2 = Terminus:style=Regular:size=14
 modules-left = i3
 modules-center = xwindow mpd
-modules-right = pulseaudio battery temperature memory filesystem cpu wlan eth date
+modules-right = wlan eth pulseaudio battery memory filesystem cpu temperature date
 tray-position = left
 tray-padding = 0
 tray-transparent = true
@@ -277,20 +199,20 @@ label = %percentage_used%
 [module/wlan]
 type = internal/network
 interface = wlan0
-interval = 10
+interval = 3
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
-label-connected = %essid%
+label-connected = ↓%downspeed% ↑%upspeed% %essid% %local_ip%
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
-ramp-signal-0 = !
-ramp-signal-1 = |
-ramp-signal-2 = ||)
-ramp-signal-3 = |||)
-ramp-signal-4 = :)
+ramp-signal-0 = 0
+ramp-signal-1 = 1
+ramp-signal-2 = 2
+ramp-signal-3 = 3
+ramp-signal-4 = 4
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/usb]
@@ -335,10 +257,10 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume>
 label-volume = pulse %percentage%%
 label-volume-foreground = ${root.foreground}
-label-muted = pulse muted
+label-muted = muted
 label-muted-foreground = #666
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -458,3 +380,82 @@ screenchange-reload = true
 [global/wm]
 margin-top = 0
 margin-bottom = 0
+; VGA TOP
+[bar/vgatop]
+monitor = ${env:MONITOR:VGA-1}
+width = 100%
+height = 20
+;offset-x = 1%
+;offset-y = 1%
+radius = 0
+fixed-center = false
+background = ${colors.background}
+foreground = ${colors.white}
+line-size = 0
+line-color = #f00
+border-size = 0
+border-color = #00000000
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 1
+font-0 = Terminus:style=Regular:size=14
+font-1 = Terminus:style=Regular:size=14
+font-2 = Terminus:style=Regular:size=14
+modules-left = i3
+modules-center = xwindow
+;modules-right = wlan eth memory filesystem battery cpu temperature
+tray-position =
+tray-padding = 0
+;tray-transparent = true
+;tray-background = #0063ff
+wm-restack = i3
+;override-redirect = true
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+; BOTTOM BAR
+[bar/bottom]
+bottom = true
+monitor = ${env:MONITOR:HDMI-1}
+;monitor = ${env:MONITOR:LVDS-1}
+width = 100%
+height = 20
+;offset-x = 1%
+;offset-y = 1%
+radius = 0
+fixed-center = false
+background = ${colors.background}
+foreground = ${colors.white}
+line-size = 0
+line-color = #f00
+border-size = 0
+border-color = #00000000
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 1
+font-0 = Terminus:style=Regular:size=14
+font-1 = Terminus:style=Regular:size=14
+font-2 = Terminus:style=Regular:size=14
+;modules-left = i3
+;modules-center = xwindow mpd
+modules-right = wlan eth memory filesystem battery cpu temperature
+tray-position =
+tray-padding = 0
+;tray-transparent = true
+;tray-background = #0063ff
+wm-restack = i3
+;override-redirect = true
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
