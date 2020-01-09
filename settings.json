@@ -28,9 +28,11 @@
     "vue-html": "html"
   },
   "files.exclude": {
-    "**/.twigcache": true,
-    "**/node_modules": true,
-    "**/vendor": true
+    "**/.twigcache/**": true,
+    "**/node_modules/**": true,
+    "**/vendor/**": true,
+    "**/.vscode/**": true,
+    "**/.git/**": true
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
