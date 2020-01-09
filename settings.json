@@ -1,1 +1,56 @@
-/Users/jacobswartz/Library/Application Support/Code/User/settings.json
+{
+  "bracket-pair-colorizer-2.forceIterationColorCycle": true,
+  "debug.console.fontSize": 10,
+  "editor.accessibilityPageSize": 1,
+  "editor.accessibilitySupport": "off",
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.cursorBlinking": "solid", // blinking eats CPU cycles
+  "editor.fontFamily": "DejaVu for Powerline, Menlo, Monaco, 'Courier New', monospace",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveTimeout": 5000,
+  "editor.formatOnType": true, // perhaps temporary
+  "editor.formatOnPaste": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.overviewRulerBorder": false,
+  "editor.quickSuggestionsDelay": 100,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "boundary",
+  "editor.roundedSelection": false,
+  "editor.rulers": [
+    100,
+    120,
+    80
+  ],
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "files.exclude": {
+    "**/.twigcache": true,
+    "**/node_modules": true,
+    "**/vendor": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "html.format.endWithNewline": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.preserveNewLines": false,
+  "problems.showCurrentInStatus": true,
+  "search.collapseResults": "auto",
+  "search.showLineNumbers": true,
+  "search.smartCase": true,
+  "search.usePCRE2": true,
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "terminal.external.osxExec": "iTerm2.app",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.fontSize": 10,
+  "terminal.integrated.rendererType": "canvas",
+  "terminal.integrated.scrollback": 500,
+  "window.titleBarStyle": "native",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.labelFormat": "short"
+}
