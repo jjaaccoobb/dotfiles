@@ -1,3 +1,24 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+	Plugin 'VundleVim/Vundle.vim'
+	" Track the engine.
+	Plugin 'SirVer/ultisnips'
+	Plugin 'neomake/neomake'
+	Plugin 'mhinz/vim-signify'
+	Plugin 'phpactor/phpactor'
+	" Snippets are separated from the engine. Add this if you want them:
+	Plugin 'honza/vim-snippets'
+	Plugin 'itchyny/lightline.vim'
+	Plugin 'tpope/vim-fugitive'
+	Plugin 'mhinz/vim-startify'
+call vundle#end()            " required
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+" When writing a buffer (no delay).
+" Full config: when writing or reading a buffer, and on changes in insert and
+" normal mode (after 500ms; no delay when writing).
+call neomake#configure#automake('nrwi', 500)
 syntax enable
 filetype plugin indent on
 let mapleader=","
@@ -83,8 +104,8 @@ set wildmenu
 set wildmode=longest:list,full
 set wrap
 " Dark gray bg, light gray numbers, yellow bold current line
-highlight CursorLineNr ctermbg=235 ctermfg=3 cterm=bold
-highlight LineNr ctermfg=8 ctermbg=235
+"highlight CursorLineNr ctermbg=235 ctermfg=3 cterm=bold
+"highlight LineNr ctermfg=8 ctermbg=235
 
 " open files in tabs (e.g. `vim file1 file2 file3`) - ala `vim -p file1 file2`
 au VimEnter * if !&diff | tab all | tabfirst | endif
@@ -114,3 +135,13 @@ set background=dark
 " see :help motion.txt
 " see :help WORD
 :set autowrite
+" set the runtime path to include Vundle and initialize
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
